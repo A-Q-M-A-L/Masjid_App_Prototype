@@ -1,0 +1,55 @@
+@layer tailwind-base, primevue, tailwind-utilities;
+
+@layer tailwind-base {
+  @tailwind base;
+}
+
+@layer tailwind-utilities {
+  @tailwind components;
+  @tailwind utilities;
+}
+
+:root {
+  --color-primary: #1e6b4a;
+  --color-primary-light: #e8f5ee;
+  --color-surface: #fafaf8;
+  --color-text: #1a1a1a;
+  --color-muted: #6b7280;
+}
+
+body {
+  @apply bg-[var(--color-surface)] text-[var(--color-text)] text-lg antialiased;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.page-container {
+  @apply w-full px-4 sm:px-6 lg:px-8 py-6;
+}
+
+.page-header {
+  @apply w-full px-4 sm:px-6 lg:px-8 py-4;
+}
+
+.stat-card {
+  @apply bg-white rounded-xl border border-gray-200 p-5 shadow-sm;
+}
+
+.stat-label {
+  @apply text-base text-[var(--color-muted)] mb-1;
+}
+
+.stat-value {
+  @apply text-2xl font-semibold text-[var(--color-text)];
+}
+
+.nav-link {
+  @apply px-4 py-2 rounded-lg text-base font-medium transition-colors;
+}
+
+.nav-link-active {
+  @apply bg-[var(--color-primary)] text-white;
+}
+
+.nav-link-inactive {
+  @apply text-gray-700 hover:bg-gray-100;
+}
