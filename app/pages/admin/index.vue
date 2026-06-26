@@ -91,7 +91,10 @@ async function load() {
 
 async function approve(id: string) {
   try {
-    await api(`/api/admin/transactions/${id}/approve`, { method: "PATCH" });
+    await api(`/api/admin/transactions/${id}/approve`, {
+      method: "PATCH",
+      body: {},
+    });
     await load();
   } catch (e: unknown) {
     const err = e as { data?: { message?: string } };
